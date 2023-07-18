@@ -1,6 +1,7 @@
 # Build results
 [Bb]in/
 [Oo]bj/
+packages/
 
 # Visual Studio Code
 .idea/
