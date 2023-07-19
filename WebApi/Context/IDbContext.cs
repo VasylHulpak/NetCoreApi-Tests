@@ -1,6 +1,6 @@
 ﻿using WebApi.Models;
 
-namespace WebApi.Services;
+namespace WebApi.Context;
 
 public interface IDbContext
 {
