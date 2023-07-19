@@ -4,8 +4,7 @@ namespace WebApi.Services;
 
 public class DbContext : IDbContext
 {
-
-	public IEnumerable<ResponseModel> GetList()
+	public async Task<IList<ResponseModel>> GetList()
 	{
 		return new List<ResponseModel>()
 		{

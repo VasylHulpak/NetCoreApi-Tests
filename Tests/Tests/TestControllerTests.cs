@@ -15,33 +15,32 @@ public class TestControllerTests
 	private Mock<IDbContext>? _context;
 	private TestController? _controller;
 	private Mock<ILogger<TestController>>? _logger;
+	private IList<ResponseModel>? _mockList;
 	
 	[SetUp]
 	public void SetTup()
 	{
-		_context = new Mock<IDbContext>();
-		_context.Setup(m => m.GetList()).Returns(new List<ResponseModel>
+		_mockList = new List<ResponseModel>
 		{
 			new ResponseModel() { Id = 1, Name = "test1" },
 			new ResponseModel() { Id = 2, Name = "test2" },
-		});
+		};
+		
+		_context = new Mock<IDbContext>();
+		_context.Setup(m => m.GetList()).ReturnsAsync(_mockList);
 
 		_logger = new Mock<ILogger<TestController>>();
 		_controller = new TestController(_logger.Object, _context.Object);
 	}
 
 	[Test]
-	public void GetData()
+	public async Task GetData()
 	{
 		//arrange
-		var actualResult = new List<ResponseModel>
-		{
-			new ResponseModel() { Id = 1, Name = "test1" },
-			new ResponseModel() { Id = 2, Name = "test2" },
-		};
+		var actualResult = _mockList;
 
 		//act
-		var expectedResult = _controller.GetData();
+		var expectedResult = await _controller.GetData();
 
 		//Assert
 		Assert.AreEqual(actualResult.Count(), expectedResult.Count());

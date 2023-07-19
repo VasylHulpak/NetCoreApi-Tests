@@ -26,8 +26,8 @@ public class TestController : ControllerBase
 
 	[HttpGet]
 	[Route("GetData")]
-	public IEnumerable<ResponseModel> GetData()
+	public async Task<IList<ResponseModel>> GetData()
 	{
-		return _context.GetList();
+		return await _context.GetList();
 	}
 }

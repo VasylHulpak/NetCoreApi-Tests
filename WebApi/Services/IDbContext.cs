@@ -4,5 +4,5 @@ namespace WebApi.Services;
 
 public interface IDbContext
 {
-	public IEnumerable<ResponseModel> GetList();
+	Task<IList<ResponseModel>> GetList();
 }

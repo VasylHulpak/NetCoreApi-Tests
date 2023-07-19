@@ -8,8 +8,8 @@ public class LoggerMiddleware
 	{
 		_next = next;
 		_logger = logger;
-
 	}
+	
 	public async Task InvokeAsync(HttpContext context)
 	{
 		if (context.Request.Path.HasValue && context.Request.Path.Value.StartsWith("/api/"))
