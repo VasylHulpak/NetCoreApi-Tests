@@ -19,9 +19,22 @@ public class TestController : ControllerBase
 
 	[HttpPost]
 	[Route("AddData")]
-	public void AddData(ResponseModel model)
+	public void AddData([FromBody] ResponseModel model)
 	{
 		_logger.LogInformation("Logger model - {model}", JsonConvert.SerializeObject(model));
+	}
+	[HttpGet]
+	[Route("FromQuery")]
+	public string FromQuery([FromQuery] string query)
+	{
+		return $"Method FromQuery: query = {query}";
+	}
+	
+	[HttpGet]
+	[Route("FromRoute/{id}")]
+	public string FromRoute([FromRoute] int id)
+	{
+		return $"Method FromRoute: id = {id}";
 	}
 
 	[HttpGet]
