@@ -23,6 +23,7 @@ public class TestController : ControllerBase
 	{
 		_logger.LogInformation("Logger model - {model}", JsonConvert.SerializeObject(model));
 	}
+	
 	[HttpGet]
 	[Route("FromQuery")]
 	public string FromQuery([FromQuery] string query)
