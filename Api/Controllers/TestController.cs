@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Api.Context;
+using Api.Models;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using WebApi.Context;
-using WebApi.Models;
 
-namespace WebApi.Controllers;
+namespace Api.Controllers;
 
 [Route("/api/Test")]
 public class TestController : ControllerBase

@@ -1,5 +1,5 @@
-using WebApi.Context;
-using WebApi.Middlewares;
+using Api.Context;
+using Api.Middlewares;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

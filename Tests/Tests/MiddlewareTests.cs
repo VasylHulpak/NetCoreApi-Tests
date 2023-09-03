@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
-using WebApi.Middlewares;
+using Api.Middlewares;
 
 namespace Tests2.Tests;
 

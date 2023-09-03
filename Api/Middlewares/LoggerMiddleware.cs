@@ -1,4 +1,4 @@
-﻿namespace WebApi.Middlewares;
+﻿namespace Api.Middlewares;
 
 public class LoggerMiddleware
 {

@@ -1,4 +1,4 @@
-﻿namespace WebApi.Models;
+﻿namespace Api.Models;
 
 public class ResponseModel
 {

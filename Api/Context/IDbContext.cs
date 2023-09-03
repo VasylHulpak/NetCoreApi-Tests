@@ -1,6 +1,6 @@
-﻿using WebApi.Models;
+﻿using Api.Models;
 
-namespace WebApi.Context;
+namespace Api.Context;
 
 /// <summary>
 /// Interface IDbContext.

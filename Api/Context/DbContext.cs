@@ -1,6 +1,6 @@
-﻿using WebApi.Models;
+﻿using Api.Models;
 
-namespace WebApi.Context;
+namespace Api.Context;
 
 public class DbContext : IDbContext
 {
